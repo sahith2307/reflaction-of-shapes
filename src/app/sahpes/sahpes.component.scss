@@ -1,0 +1,75 @@
+.total-shapes {
+  display: flex;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+}
+.constant-parent {
+  display: flex;
+}
+.middle-line {
+  width: 1px;
+  background-color: rgb(121, 58, 153);
+}
+.constant-shapes {
+  background-color: rgb(212, 183, 226);
+  border: 1px solid rgb(121, 58, 153);
+  height: 50px;
+  width: 50px;
+  cursor: "pointer";
+}
+.background-shape {
+  background-color: rgb(121, 58, 153);
+  border: 1px solid rgb(212, 183, 226);
+}
+.success-shape {
+  background-color: rgb(29, 153, 70);
+  border: 1px solid rgb(133, 170, 144);
+}
+.failure-shape {
+  background-color: rgb(192, 33, 12);
+  border: 1px solid rgb(216, 130, 118);
+}
+.button-container {
+  display: flex;
+  justify-content: space-around;
+  margin: auto;
+  width: 20vw;
+  padding-top: 20px;
+}
+.submit-button {
+  color: #ffffff;
+  background-color: #0be289;
+  height: 42px;
+  width: 100px;
+  border-radius: 20px;
+  border-width: 0px;
+}
+.reset-button {
+  color: #ffffff;
+  background-color: #0bc9e2;
+  height: 42px;
+  width: 100px;
+  border-width: 0px;
+  border-radius: 20px;
+}
+.list-container {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+  width: 30vw;
+  border-radius: 10px;
+  height: 200px;
+  overflow-y: auto;
+  margin-top: 10px;
+  background-color: rgb(212, 183, 226);
+  ul {
+    list-style: none;
+    color: rgb(121, 58, 153);
+    li {
+      padding-top: 5px;
+      font-weight: 600;
+    }
+  }
+}
