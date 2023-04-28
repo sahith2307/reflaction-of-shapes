@@ -45,18 +45,25 @@ export class SahpesComponent {
       this.time += 1;
     }, 1000);
   }
+
   onClickShades = (index: number) => {
-    if (this.clickShades.includes(index)) {
-      this.clickShades.splice(this.clickShades.indexOf(index), 1);
-      this.stamp.push('removed by click on: ' + this.time + ' sec');
-    } else {
-      this.clickShades.push(index);
-      this.stamp.push('added by click on: ' + this.time + ' sec');
+    console.log(this.shades);
+    console.log(index);
+    if (!this.submit) {
+      if (this.clickShades.includes(index)) {
+        this.clickShades.splice(this.clickShades.indexOf(index), 1);
+        this.stamp.push('removed by click on: ' + this.time + ' sec');
+      } else {
+        this.clickShades.push(index);
+        this.stamp.push('added by click on: ' + this.time + ' sec');
+      }
     }
   };
   onClickSubmit = () => {
     this.submit = true;
     clearInterval(this.interval);
+    console.log(this.clickShades);
+    console.log(this.shades);
     const wrong = [];
     this.clickShades.forEach((each: number) => {
       if (!this.shades.includes(each)) {
