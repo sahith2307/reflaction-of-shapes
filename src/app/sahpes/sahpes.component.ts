@@ -6,6 +6,22 @@ import { Component } from '@angular/core';
   styleUrls: ['./sahpes.component.scss'],
 })
 export class SahpesComponent {
+  gamers: number[][] = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9],
+    [10, 11, 12],
+    [13, 14, 15],
+    [16, 17, 18],
+  ];
+  original: number[][] = [
+    [3, 2, 1],
+    [6, 5, 4],
+    [9, 8, 7],
+    [12, 11, 10],
+    [15, 14, 13],
+    [18, 17, 16],
+  ];
   shades: Array<any> = [];
   clickShades: Array<any> = [];
   stamp: any = [];
@@ -19,9 +35,9 @@ export class SahpesComponent {
   }
   onStartReset() {
     for (let i = 0; i < 8; i++) {
-      let randomNumber = Math.floor(Math.random() * 18);
+      let randomNumber = Math.floor(Math.random() * 18) + 1;
       while (this.shades.includes(randomNumber)) {
-        randomNumber = Math.floor(Math.random() * 18);
+        randomNumber = Math.floor(Math.random() * 18) + 1;
       }
       this.shades.push(randomNumber);
     }

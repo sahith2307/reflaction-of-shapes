@@ -3,124 +3,12 @@
 </div>
 <div class="total-shapes">
   <div>
-    <div class="constant-parent">
+    <div class="constant-parent" *ngFor="let numbers of original">
       <div
+        *ngFor="let number of numbers"
         [ngClass]="{
-        'background-shape': shades.includes(2),
-      }"
-        class="constant-shapes"
-      ></div>
-
-      <div
-        [ngClass]="{
-          'background-shape': shades.includes(1),
-        }"
-        class="constant-shapes"
-      ></div>
-      <div
-        [ngClass]="{
-        'background-shape': shades.includes(0),
-      }"
-        class="constant-shapes"
-      ></div>
-    </div>
-    <div class="constant-parent">
-      <div
-        [ngClass]="{
-        'background-shape': shades.includes(5),
-      }"
-        class="constant-shapes"
-      ></div>
-      <div
-        [ngClass]="{
-        'background-shape': shades.includes(4),
-      }"
-        class="constant-shapes"
-      ></div>
-      <div
-        [ngClass]="{
-        'background-shape': shades.includes(3),
-      }"
-        class="constant-shapes"
-      ></div>
-    </div>
-    <div class="constant-parent">
-      <div
-        [ngClass]="{
-        'background-shape': shades.includes(8),
-      }"
-        class="constant-shapes"
-      ></div>
-      <div
-        [ngClass]="{
-        'background-shape': shades.includes(7),
-      }"
-        class="constant-shapes"
-      ></div>
-      <div
-        [ngClass]="{
-        'background-shape': shades.includes(6),
-      }"
-        class="constant-shapes"
-      ></div>
-    </div>
-    <div class="constant-parent">
-      <div
-        [ngClass]="{
-        'background-shape': shades.includes(11),
-      }"
-        class="constant-shapes"
-      ></div>
-      <div
-        [ngClass]="{
-        'background-shape': shades.includes(10),
-      }"
-        class="constant-shapes"
-      ></div>
-      <div
-        [ngClass]="{
-        'background-shape': shades.includes(9),
-      }"
-        class="constant-shapes"
-      ></div>
-    </div>
-    <div class="constant-parent">
-      <div
-        [ngClass]="{
-        'background-shape': shades.includes(14),
-      }"
-        class="constant-shapes"
-      ></div>
-      <div
-        [ngClass]="{
-        'background-shape': shades.includes(13),
-      }"
-        class="constant-shapes"
-      ></div>
-      <div
-        [ngClass]="{
-        'background-shape': shades.includes(12),
-      }"
-        class="constant-shapes"
-      ></div>
-    </div>
-    <div class="constant-parent">
-      <div
-        [ngClass]="{
-        'background-shape': shades.includes(17),
-      }"
-        class="constant-shapes"
-      ></div>
-      <div
-        [ngClass]="{
-        'background-shape': shades.includes(16),
-      }"
-        class="constant-shapes"
-      ></div>
-      <div
-        [ngClass]="{
-        'background-shape': shades.includes(15),
-      }"
+      'background-shape': shades.includes(number),
+    }"
         class="constant-shapes"
       ></div>
     </div>
@@ -129,182 +17,19 @@
     <div class="middle-line"></div>
   </div>
   <div>
-    <div class="constant-parent">
-      <div
+    <div class="constant-parent" *ngFor="let numbers of original">
+      <button
+        title="none"
+        *ngFor="let number of numbers"
         [ngClass]="{
-          'background-shape': clickShades.includes(0),
+          'background-shape': clickShades.includes(number),
           'success-shape':
-            clickShades.includes(0) && submit && shades.includes(0),
-          'failure-shape':!clickShades.includes(0)&&   submit && shades.includes(0),
+            clickShades.includes(number) && submit && shades.includes(number),
+          'failure-shape':!clickShades.includes(number)&&   submit && shades.includes(number),
         }"
-        class="constant-shapes"
-        (click)="onClickShades(0)"
-      ></div>
-      <div
-        [ngClass]="{
-        'background-shape': clickShades.includes(1),
-        'success-shape':
-            clickShades.includes(1) && submit && shades.includes(1),
-            'failure-shape':!clickShades.includes(1)&&   submit && shades.includes(1),
-      }"
-        class="constant-shapes"
-        (click)="onClickShades(1)"
-      ></div>
-      <div
-        [ngClass]="{
-        'background-shape': clickShades.includes(2),
-        'success-shape':
-            clickShades.includes(2) && submit && shades.includes(2),
-        'failure-shape':!clickShades.includes(2)&&   submit && shades.includes(2),
-      }"
-        class="constant-shapes"
-        (click)="onClickShades(2)"
-      ></div>
-    </div>
-    <div class="constant-parent">
-      <div
-        [ngClass]="{
-        'background-shape': clickShades.includes(3),'success-shape':
-        clickShades.includes(3) && submit && shades.includes(3),
-      'failure-shape':  !clickShades.includes(3) && submit && shades.includes(3),
-      }"
-        class="constant-shapes"
-        (click)="onClickShades(3)"
-      ></div>
-      <div
-        [ngClass]="{
-        'background-shape': clickShades.includes(4),'success-shape':
-        clickShades.includes(4) && submit && shades.includes(4),
-      'failure-shape':  !clickShades.includes(4) && submit && shades.includes(4),
-      }"
-        class="constant-shapes"
-        (click)="onClickShades(4)"
-      ></div>
-      <div
-        [ngClass]="{
-        'background-shape': clickShades.includes(5),'success-shape':
-        clickShades.includes(5) && submit && shades.includes(5),
-      'failure-shape':  !clickShades.includes(5) && submit && shades.includes(5),
-      }"
-        class="constant-shapes"
-        (click)="onClickShades(5)"
-      ></div>
-    </div>
-    <div class="constant-parent">
-      <div
-        [ngClass]="{
-        'background-shape': clickShades.includes(6),'success-shape':
-        clickShades.includes(6) && submit && shades.includes(6),
-      'failure-shape':  !clickShades.includes(6) && submit && shades.includes(6),
-      }"
-        class="constant-shapes"
-        (click)="onClickShades(6)"
-      ></div>
-      <div
-        [ngClass]="{
-        'background-shape': clickShades.includes(7),'success-shape':
-        clickShades.includes(7) && submit && shades.includes(7),
-      'failure-shape':  !clickShades.includes(7) && submit && shades.includes(7),
-      }"
-        class="constant-shapes"
-        (click)="onClickShades(7)"
-      ></div>
-      <div
-        [ngClass]="{
-        'background-shape': clickShades.includes(8),'success-shape':
-        clickShades.includes(8) && submit && shades.includes(8),
-      'failure-shape':  !clickShades.includes(8) && submit && shades.includes(8),
-      }"
-        class="constant-shapes"
-        (click)="onClickShades(8)"
-      ></div>
-    </div>
-    <div class="constant-parent">
-      <div
-        [ngClass]="{
-        'background-shape': clickShades.includes(9),'success-shape':
-        clickShades.includes(9) && submit && shades.includes(9),
-      'failure-shape':  !clickShades.includes(9) && submit && shades.includes(9),
-      }"
-        class="constant-shapes"
-        (click)="onClickShades(9)"
-      ></div>
-      <div
-        [ngClass]="{
-        'background-shape': clickShades.includes(10),'success-shape':
-        clickShades.includes(10) && submit && shades.includes(10),
-      'failure-shape':  !clickShades.includes(10) && submit && shades.includes(10),
-      }"
-        class="constant-shapes"
-        (click)="onClickShades(10)"
-      ></div>
-      <div
-        [ngClass]="{
-        'background-shape': clickShades.includes(11),'success-shape':
-        clickShades.includes(11) && submit && shades.includes(11),
-      'failure-shape':  !clickShades.includes(11) && submit && shades.includes(11),
-      }"
-        class="constant-shapes"
-        (click)="onClickShades(11)"
-      ></div>
-    </div>
-    <div class="constant-parent">
-      <div
-        [ngClass]="{
-        'background-shape': clickShades.includes(12),'success-shape':
-        clickShades.includes(12) && submit && shades.includes(12),
-      'failure-shape':  !clickShades.includes(12) && submit && shades.includes(12),
-      }"
-        class="constant-shapes"
-        (click)="onClickShades(12)"
-      ></div>
-      <div
-        [ngClass]="{
-        'background-shape': clickShades.includes(13),'success-shape':
-        clickShades.includes(13) && submit && shades.includes(13),
-      'failure-shape':  !clickShades.includes(13) && submit && shades.includes(13),
-      }"
-        class="constant-shapes"
-        (click)="onClickShades(13)"
-      ></div>
-      <div
-        [ngClass]="{
-        'background-shape': clickShades.includes(14),'success-shape':
-        clickShades.includes(14) && submit && shades.includes(14),
-      'failure-shape':  !clickShades.includes(14) && submit && shades.includes(14),
-      }"
-        class="constant-shapes"
-        (click)="onClickShades(14)"
-      ></div>
-    </div>
-    <div class="constant-parent">
-      <div
-        [ngClass]="{
-        'background-shape': clickShades.includes(15),'success-shape':
-        clickShades.includes(15) && submit && shades.includes(15),
-      'failure-shape':  !clickShades.includes(15) && submit && shades.includes(15),
-      }"
-        class="constant-shapes"
-        (click)="onClickShades(15)"
-      ></div>
-      <div
-        [ngClass]="{
-        'background-shape': clickShades.includes(16),'success-shape':
-        clickShades.includes(16) && submit && shades.includes(16),
-      'failure-shape':  !clickShades.includes(16) && submit && shades.includes(16),
-      }"
-        class="constant-shapes"
-        (click)="onClickShades(16)"
-      ></div>
-      <div
-        [ngClass]="{
-        'background-shape': clickShades.includes(17),'success-shape':
-        clickShades.includes(17) && submit && shades.includes(17),
-      'failure-shape':  !clickShades.includes(17) && submit && shades.includes(17),
-      }"
-        class="constant-shapes"
-        (click)="onClickShades(17)"
-      ></div>
+        class="button-shapes"
+        (click)="onClickShades(number)"
+      ></button>
     </div>
   </div>
 </div>
