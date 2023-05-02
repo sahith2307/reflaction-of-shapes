@@ -22,13 +22,12 @@ export class SahpesComponent {
     [15, 14, 13],
     [18, 17, 16],
   ];
-  shades: Array<any> = [];
-  clickShades: Array<any> = [];
-  stamp: any = [];
+  shades: Array<number> = [];
+  clickShades: Array<number> = [];
+  stamp: string[] = [];
   clickCount = 0;
   time: number = 0;
   submit: boolean = false;
-  results: boolean = false;
   interval: any;
   constructor() {
     this.onStartReset();
@@ -64,21 +63,6 @@ export class SahpesComponent {
     clearInterval(this.interval);
     console.log(this.clickShades);
     console.log(this.shades);
-    const wrong = [];
-    this.clickShades.forEach((each: number) => {
-      if (!this.shades.includes(each)) {
-        wrong.push(each);
-      }
-    });
-    if (this.clickShades.length === this.shades.length) {
-      if (wrong.length === 0) {
-        this.results = true;
-      } else {
-        this.results = false;
-      }
-    } else {
-      this.results = false;
-    }
   };
   onClickReset = () => {
     this.clickCount = 0;
